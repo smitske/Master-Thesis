@@ -1,0 +1,192 @@
+\chapter{Questionnaire}
+\label{chapt:appendix}
+
+This questionnaire is part of manageability/usability study of the researched access control models. 
+After letting test users complete multiple scenarios with the researched models we ask them to fill out this survey to get an insight in their experiences with the models.
+
+\hskip-2.5cm\section{Part 1: Quantification}
+Rate following tasks on a scale of 1 to 5 for how difficult a certain task  was.
+1 stands for very easy, 5 for very hard.
+
+\hskip-2.8cm\begin{tabular}{p{8cm} p{1cm} p{1cm} p{1cm} p{1cm} p{1cm}}
+    \multicolumn{6}{c}{} \\
+    & 1 & 2 & 3 & 4 & 5
+    \\
+    T1 : Adding new roles to the system.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+    \\
+    T2 : Adding new permissions/policies to the system.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+    \\
+    T3 : Deciding what a user can do given a set of policies (ABAC).
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+    \\
+    T4 : Deciding what a user can do given a set of permissions (RBAC) and a mapping of these permissions to roles.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\end{tabular}
+    
+\hskip-2.8cm\begin{tabular}{p{8cm} p{1cm} p{1cm} p{1cm} p{1cm} p{1cm}}
+    \multicolumn{6}{c}{} \\
+    & 1 & 2 & 3 & 4 & 5 \\
+    \\
+    T5 : Adding new policies and knowing their effects(ABAC).
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+    \\
+    T6 : Using conditions to prevent access to certain subsets of objects.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+    \\
+    T7 : Preventing certain users from seeing specific values.
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$
+    \\
+    T8 : Switching your own role to get a different set of permissions.
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+    \\
+    T9 : Setting up the system with as few permissions as possible(RBAC).
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+    \\
+     T10 : Setting up the system with as few policies as possible(ABAC).
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+    \\
+    T11 : Adding roles to users.
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+    \\
+    T12 : Adding multiple permissions/policies of the same action on different resources.
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+     \\
+    T13 : Adding permissions/policies with multiple actions to the same resource.
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\   
+     \\
+    T14 : Adding multiple masks on a permission/policy on a single resource.
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+     \\
+    T15 : Adding multiple conditions on a permission/policy on a single resource.
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+     \\
+    T16 : Deleting any of the created roles, policies or permissions.
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+     \\
+    T17 : Using negative policies to limit the number of total policies.
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+     \\
+    T18 : 
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+     \\
+    T19 : 
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+     \\
+    T20 : 
+     & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\end{tabular}
+
+\clearpage
+
+\hskip-2.5cm\section{Part 2: Statements}
+Rate the following statements on how much you agree/disagree with them. 
+For these questions we have also looked at similar work on comparison of access control models such as Comparative analysis of Role Base and Attribute Base
+Access Control Model in Semantic Web from Sonu Verma et al, they compared the same models but did so in Semantic Web\cite{Related1}. We also looked at Shabnam Mohammad Hasani et al their work, Criteria Specifications for the Comparison and Evaluation of Access Control Models, comparing RBAC with DAC and MAC\cite{Related3}.
+ 
+\hskip-2.8cm\begin{tabular}{p{5cm} c c c c c}
+    \multicolumn{6}{c}{} \\        
+    & Strongly agree & Agree & Neutral  & Disagree & Strongly Disagree \\ 
+    \\
+    Q1 : When building heavy role dependant systems the RBAC model is easier to manage than the ABAC model. & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+    \\
+    Q2 : Looking at the architecture it would be easy to make a good visual representation of what a user can do using RBAC.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q3 : Looking at the architecture it would be easy to figure out for users what they can do using ABAC.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q4 : The addition of negative rules in ABAC makes it easier to manage because we can make global policies and exempt specific cases.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+\end{tabular}
+
+\hskip-2.8cm\begin{tabular}{p{5cm} c c c c c}
+    \multicolumn{6}{c}{} \\        
+    & Strongly agree & Agree & Neutral  & Disagree & Strongly Disagree \\
+    \\
+    Q5 : Adding permissions and assigning these to roles in RBAC has little to no unforeseen side effects.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q6 : Adding new policies in ABAC has little to no unforeseen side effects.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q7 : The implemented RBAC model allows for access control that is dynamic enough to depend on it with a running system.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q8 : The implemented ABAC model allows for access control that is dynamic enough to depend on it with a running system.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q9 : The addition of constraints, where users cannot have 2 specific roles assigned to them, in the RBAC model are worthwhile.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    Q10 : There is a problem with policy explosion for the ABAC model.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q10 : There is a problem with role explosion for the RBAC model.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q11 : There is a problem with permission explosion for the RBAC model.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+\end{tabular}
+
+\hskip-2.8cm\begin{tabular}{p{5cm} c c c c c}
+    \multicolumn{6}{c}{} \\        
+    & Strongly agree & Agree & Neutral  & Disagree & Strongly Disagree \\
+    \\
+    Q12 : The ability to change roles quickly  allows for better separation of duty.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q13 : It is better to put access control authority in the hands of an administrator than in the hands of the users themselves like is done in other models.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q14 : Having a role hierarchy where we can inherit from other roles would make management easier.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q15 : The RBAC model allows for easy customization for different applications.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q16 : The ABAC model allows for easy customization for different applications.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q17 : The RBAC model is better suited for complex systems than the ABAC model.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q18 : Maintaining (adding rules in an existing system) a RBAC system is less complicated than maintaining an ABAC system.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q19 : The options for setting conditions on policies and permissions are versatile enough.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q20 : Using ABAC the behaviour is not always clear from just looking at the different policies.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+\end{tabular}
+
+\hskip-2.8cm\begin{tabular}{p{5cm} c c c c c}
+    \multicolumn{6}{c}{} \\        
+    & Strongly agree & Agree & Neutral  & Disagree & Strongly Disagree \\
+    \\
+    Q21 : Using conditions requires significant knowledge of the inner workings of the application.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q22 : Masking specific values requires significant knowledge about the data model used for the application.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q23 : Using features such as masking and conditions require a deep knowledge of the implementation of the access control model.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q24 : To allow easy editing of conditions there is need of a domain specific editing language.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q25 : Putting the responsibility for maintaining the access control models in the hands of an admin can be more error prone than putting it in the hands of the developers.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q26 : The flexibility to change access control dynamically compared to programming it leads to less development time.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+    \\
+    Q27 : The flexibility to change access control dynamically compared to programming it leads to more setup time.
+    & $\square$ & $\square$ & $\square$ & $\square$ & $\square$\\
+
+\end{tabular}
+
+
+

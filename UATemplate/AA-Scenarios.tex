@@ -1,0 +1,83 @@
+\chapter{Scenario's}
+\label{appendix:scenario}
+This appendix describes the scenarios we used to test correctness and that the users had to perform as part of studying manageability.
+These 2 scenario's are based on an existing application.
+
+\section{Scenario 1}
+This scenario has 3 different roles which all have certain privileges to view (get), create (post) or edit (put) different resources. There are also actions that can only be done by a certain role. 
+\\
+The roles have to be created with the corresponding 3 letter code behind them. A user should be assigned to each role. In case of the admin role (ADM) this is already done since this is a prerequisite to use the system.
+
+\subsection{Forwarder(FWD)}
+\begin{itemize}
+    \item Can only view the CTN's they created.
+    \item Can add CTNs to the system.
+    \item Can edit CTN's if status is edited.
+    \item Can view all off the following data: CargoTypes, IncoTerms, Carriers, Currencies, Countries, CTNCities, FreightPaymentTypes, ctnAddresses, ctnTracking, ctnAttachments, ctnCharges, ctnGoods, ctnContainers, TransportTypes, UserCommunication, GoodsClassifications, ContainerTypes, Statuses, Charges, IMOs, Locations.
+    \item Can Create all of the following data: UserCommunication, ctnGoods, ctnContainers, ctnAttachments.
+    \item Can delete following data: ctnAttachments, ctnContainers, ctnGoods.
+    \item Can edit all of the following data: ctnTracking, ctnCharges, ctnAddresses, ctnGoods, ctnContainers. 
+    \item Can perform action requestvisa if ctn status is edited or visa corrected.
+    \item Can perform action copyctn if ctn status is edited, visa granted, correction granted, visa accepted.
+    \item The user SEAFRIGO should be assigned to this role.
+\end{itemize}
+
+\subsection{Agent(AGT)}
+\begin{itemize}
+    \item Can view all the CTN's associated with forwarders they manage.
+    \item Can view all off the following data: ctnAddresses, ctnTracking, ctnAttachments, ctnCharges, ctnGoods, ctnContainers, UserCommunication.
+    \item Can Create all of the following data: UserCommunication.
+    \item Can perform action approvevisa if ctn status is Requested visa, requested correction or visa pending.
+     \item Can perform action refusevisa if ctn status is Requested visa, requested correction or visa pending.
+     \item Can perform action suspendvisa if ctn status is Requested visa.
+     \item The user AGENTFRANCE should be assigned to this role.
+\end{itemize}
+
+\subsection{Admin(ADM)}
+\begin{itemize}
+    \item Can view all the CTN's.
+    \item Can view all off the following data: ctnAddresses, ctnTracking, ctnAttachments, ctnCharges, ctnGoods, ctnContainers, UserCommunication.
+     \item Can Create all of the following data: UserCommunication.    
+\end{itemize}
+
+\section{Scenario 2}
+This scenario also has 3 different roles which all have certain privileges to view (get), create (post) or edit (put) different resources.
+There are also actions that can only be done by a certain role.
+Some values have to be hidden so they cannot be seen or cannot be edited.
+\\
+The roles have to be created with the corresponding 3 letter code behind them. A user should be assigned to each role. In case of the admin role (ADM) this is already done since this is a prerequisite to use the system.
+
+\subsection{Forwarder(FWD)}
+\begin{itemize}
+    \item Can only see their own User object,  cannot view the fields MarkedForUpdate and Current\_Visa\_Amount.
+    \item Can edit User object if it is their own User and the login is the primary login for this User. Cannot edit role, currency, active, country, MarkedForUpdate, Current\_Visa\_Amount, InvoicedToAgent or SupervisedBy.
+    \item Can view all languages, countries and currencies.
+    \item Can only view its own role.
+    \item Can only view LoginMngs associated with their User object.
+    \item Can add LoginMngs if they belong to the User object and they are the primary login.
+    \item Can edit LoginMngs where OrganisationId is the same as their User and they are the primary login, cannot edit the username, active and primary fields.
+    \item The user SEAFRIGO should be assigned to this role.
+\end{itemize}
+
+\subsection{Agent(AGT)}
+\begin{itemize}
+    \item Can view user objects that are supervised by this agent and its own associated user.
+    \item Can view user objects that are supervised by this agent and its own associated user but cannot edit the DefaultCurrencyId.
+    \item Can view roles with code FWD or EXP.
+    \item Can view all languages, countries and currencies.
+    \item Can view all LoginMngs of user objects they supervise.
+    \item Can add LoginMngs of user objects they supervise.
+    \item Can edit LoginMngs of user objects they supervise, cannot edit the username, active and primary fields.
+    \item The user AGENTFRANCE should be assigned to this role.
+\end{itemize}
+
+\subsection{Admin(ADM)}
+\begin{itemize}
+    \item Can view all user objects.
+    \item Can edit all user objects except for their DefaultCurrencyId.
+    \item Can view all roles.
+    \item Can view all languages, countries and currencies.
+    \item Can view all LoginMngs.
+    \item Can add LoginMngs.
+    \item Can edit LoginMngs, cannot edit the username, active and primary fields.
+\end{itemize}

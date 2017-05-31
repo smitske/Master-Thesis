@@ -1,0 +1,368 @@
+Avoid subsections for introduction. The part about Access control models need to go to a new section called Background. All of the undefined terms need to be categorised, put in context, and explained in background.
+
+
+* Highlight, page 4
+on the database level
+
+undefined
+
+* Highlight, page 4
+more flexible
+
+not a scientific term. how do you measure flexibility?
+
+* Anchored Note, page 4
+Paragraph1
+
+Too technical, many vague terms, and not really defining a problem. You need to identify a problem, and not a technical task. You need to define *every* term you use. For every subject you want to investigate, you need to state your goal, your question, and the metric you use to measure it.
+
+* Highlight, page 4
+Currently access control is done by using look-up and table valued functions on the database level,
+
+does this apply to everywhere? is this a wide spread problem?
+
+* Highlight, page 4
+limits the possibilities
+
+what is a possibility, and how can it be limited?
+
+* Highlight, page 4
+work flows
+undefined
+
+* Highlight, page 4
+difficult
+unscientific
+
+* Highlight, page 4
+management of access control
+
+undefined
+
+* Highlight, page 4
+Static role definitions
+
+undefined
+
+* Underline, page 4
+To overcome these limitations a new approach towards access control is preferred, making it easy to manage access rights, allowing the creation of roles and assigning permissions at run time, allow for more complex work flows to be controlled and more understandable permission rules.
+
+this sentence is four lines. if a sentence goes more than 1 line, cut it. 
+
+* Highlight, page 4
+preferred
+
+so not really important?
+
+* Highlight, page 4
+more understandable permission rules.
+
+not a scientific term
+
+* Highlight, page 4
+Above all of course the system should be completely secure, making sure no one can access or modify data/functions they are not allowed to.
+
+stating the obvious. you need to reorganise your requirements for a new system in a list. and this must go into the method section, where you describe your solution.
+
+* Highlight, page 4
+We would like to accomplish this using the Rule Based Access Control method (RBAC).
+
+Why?
+There has been no mention of this technique, or no reference on why it is superior to others. For any claim you need a reference. For any choice you need to state your reasons.
+
+* Highlight, page 4
+different RBAC models, possible extensions and variants on RBAC
+
+you haven’t defined RBAC yet. so this sentence is incomplete without these definitions
+
+
+What is RBAC?
+What is a RBAC model?
+What is an extension to RBAC?
+What is a variant on RBAC?
+What’s the difference between RBAC model, RBAC extension, and RBAC variant?
+
+this raises many more questions than it answers.
+
+
+* Highlight, page 4
+performance
+
+why is performance the important aspect?
+
+
+* Highlight, page 4
+variety of parameters such as response time, comprehensibility and others
+
+need to be explicitly mentioned, justified, and argued for. This is basically what needs to be in introduction, and it is the main pivot of the “metric” part, not just a side note.
+
+* Highlight, page 4
+which model is better on each of these parameters
+
+what happened to variants and extensions?
+
+* Strike Out, page 4
+will
+
+* Highlight, page 5
+1.2 Access control models
+
+needs to move to section background
+
+* Strike Out, page 5
+1.2.1 Introduction
+
+* Highlight, page 5
+since this policy fits best for the situation of the case study
+
+This is not a valid reason. Why does it fit best? How did you come up with it? What are your arguments? 
+
+* Highlight, page 5
+discretionary access control (DAC)
+undefined
+
+* Highlight, page 5
+mandatory access control (MAC) policies
+
+undefined
+
+* Underline, page 5
+From the RBAC models that will be proposed next, some will be made into a prototype which can then be used to run various scenarios and gather metrics to determine which one will be used for future development of the case study
+
+1-line rule
+
+* Highlight, page 5
+will be proposed next,
+
+
+NEVER reference the future. The report needs to be linear, meaning that if you want to understand the current sentence, every term needs to be defined beforehand.
+
+* Highlight, page 5
+some
+
+why not all? what is the selection procedure?
+
+* Highlight, page 5
+prototype which can then be used to run various scenarios and gather metrics
+
+completely vague
+
+What scenarios?
+Which metrics?
+What is the context of the experiment here?
+
+
+
+* Highlight, page 5
+core RBAC model
+
+
+is it basic or is it core?
+
+* Underline, page 5
+The basic idea of RBAC as given by the American NIST [1],[2] is that instead of giving permis- sions to every user of the system individually, the notion of roles will be introduced, under which we can bring together multiple users that all have the same set of permissions.
+
+* Highlight, page 5
+[1],[2]
+
+move references to the end of the sentence
+
+* Highlight, page 5
+notion of roles
+
+undefined
+
+* Highlight, page 5
+authorizations
+
+undefined
+
+* Highlight, page 5
+easier and less error prone
+
+Reference?
+
+Also vague. phrases like  “a lot” or “less” are not scientific measurements.  
+
+
+* Underline, page 5
+his because now you only have to assign permissions to roles and when a user changes a role the permissions will also change instead of manually having to assign and withdraw every single permission per user on a change in permissions as is the case in non role based systems. I
+
+
+* Highlight, page 5
+to assign permissions to roles and when a user changes a role the permissions will also change instead of manually having to assign and withdraw every single permission per user on a change in permissions as is the case in non role based systems.
+
+
+I’m completely lost. what is the context here? what “system” are we talking about? what is a  user? what is a permission? what does this “permission” apply to? 
+
+* Highlight, page 5
+more understandable
+
+vague and unscientific. try to find a metric that gives you a number. like:
+
+it reduces the number of variables  by an order of magnitude.
+
+
+
+* Highlight, page 5
+a lot less
+
+vague
+
+* Highlight, page 5
+users and permissions
+
+what is a relationship here?
+
+* Highlight, page 5
+actors
+
+undefined. 
+
+* Highlight, page 5
+mapping
+
+what is a mapping
+
+* Highlight, page 5
+operation
+
+what is an operation?
+
+* Highlight, page 5
+an object
+
+undefined
+
+* Highlight, page 5
+It should be
+
+so no validation has been done on this claim?
+
+* Highlight, page 5
+Below is the scheme of the relationship between the different building blocks for the core RBAC system.
+
+For each figure, first you have to mention figure explicitly: Figure 1 shows …..
+
+Then you have to express what it shows: In this figure, the circles are …. the arrows are … the annotations are … 
+
+Then you express what is the point you want to make:
+As it shows, users is connected to roles directly rather than …..
+
+* Highlight, page 6
+variations
+
+undefined
+
+what is the relationship between an extension, a variant, and a variation?
+
+* Highlight, page 6
+These are not necessarily mutually exclusive
+
+
+what are these? what is the quality that made us assume they are  mutually exclusive?
+
+* Highlight, page 6
+the hierarchical
+
+undefined
+
+* Highlight, page 6
+constraints based RBAC models
+
+yet another undefined term
+
+* Highlight, page 6
+These variations
+
+which one? all of them? any variation?
+
+* Highlight, page 6
+customization
+
+customisation of what?
+
+* Highlight, page 6
+easier management
+
+easier management of what?
+
+* Highlight, page 6
+extra complexity.
+
+
+complexity is an emergent phenomenon,
+complicatedness is a designed phenomenon.
+
+complexity usually does not apply to software. definitely not to models.
+
+also, it is not a negative thing per se. If you think extra complicatedness has a negative effect, you need to explain your argument.  
+
+* Highlight, page 6
+as mentioned in [1],[2], and [3].
+
+
+mentioned by who? what did they say? what was their assessment on the topic, and how does this help your argument?
+
+* Highlight, page 7
+We have an engineer and a supervisor in a relation where the supervisor derives from the engineer, but the engineer has a private project of which we give permissions to the role engineer’ which also derives from engineer. The supervisor does not have these extra permissions and can thus not access the engineer’ private project.
+
+try to rewrite this example by using standard terms for a graph, like node and edge, and referring to the figure as mentioned before.
+
+* Highlight, page 7
+mentioned in [2],[3].
+
+If you mention a reference, say something about it.
+
+* Highlight, page 7
+more specific business rules
+
+vague, rephrase and explain.
+
+* Highlight, page 7
+the principle of separation of duty
+
+define with reference. if it is a widely accepted principle, you should cite a famous paper, or a book. 
+
+* Highlight, page 9
+a lot more
+
+non scientific
+
+* Highlight, page 9
+flexibility
+
+undefined metric. rephrase the sentence to something like this:
+
+…… is more flexible than …. because …..
+
+* Highlight, page 9
+input language
+
+undefined term
+
+* Highlight, page 9
+more advanced
+
+more complicated?
+
+* Highlight, page 9
+The part on task RBAC is based on [5].
+
+
+Either remove, or properly mention the paper, authors by name, and explain what they did. This also needs to be moved *after* the definition of Task RBAC 
+
+* Highlight, page 10
+Tasks can be divided into different classes, the classes given depend on whether or not we allow inheritance of these tasks between roles and whether or not they have active or passive access control. These classes are then used to define rules upon, for example with a passive non inheritable class we have rules so that users can only do the actions of their own role on that class of tasks, but they cannot do the actions that are inherited from another user role.
+
+This begs for a figure to explain the relationship between tasks, classes, rules, roles, active and passive access control, inheritance, etc.
+
+* Highlight, page 10
+as brought forward in [6],
+
+mention the author, explain their work.
+
+* Highlight, page 10
+The second prototype will be constraints
+
+justify your choice

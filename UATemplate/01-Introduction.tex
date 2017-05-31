@@ -1,0 +1,41 @@
+\chapter{Introduction}
+\label{chapt:Introduction}
+
+\textbf{\say{The average total cost of a data breach is \$4 million, with an average cost of \$158 per record lost.} }
+\\
+
+--2016 Cost of Data Breach Study: Global Study\cite{CostQuote}
+\\
+\\
+% Intro security
+%In a day and age were security becomes more important, and not being able in providing this becomes more costly, each organisation is faced with the question on how to secure their applications. 
+Security is one the most important aspects of software systems this leads to more and more companies that are investing in the security of their applications to avoid future losses.
+These losses come from fixing the issue as well as breaches of data confidentiality, the protection of data in a system against people/systems that are not allowed to access it. 
+%This makes it so that it is important for developers to have a notion of what application security is and how they can provide it in their applications. 
+This has made good security practices an important notion in the process of software development.
+Various models and guidelines can be found in literature. 
+However, when it comes to the practical application, the developers have difficulties in deciding which solution to incorporate in their own application. %This can sometimes make it difficult for developers to decide which way to go in their own applications. 
+\\
+\\
+% Intro our scope: access control
+Security can be done on various levels, in this thesis we limit ourselves to access control, the monitoring and controlling of who has access to each resource and what they can do with that resource.
+We look at the different models that are described for access control.
+When talking about access control we however we also have to talk about authorization, this is what users are allowed to do in the system once we know who they are.
+A prerequisite for this is that the problem of authentication, verifying if the user making the request is who he claims to be, has already been solved.
+We expect this to be case for our authorization mechanisms and that we know who the people (or machines) requesting access are. 
+The most basic form of authorization is authorizing the basic CRUD operations, create/read/update/delete actions on persistent data, in our case this is done trough the use of a REST service.
+A REST service allows for communication over the web between different computer systems to transfer textual representations of web resources.
+We are however not limited to these CRUD operations and can also apply this to other actions that can be done by users, such as signing off on important documents.
+\\
+\\
+% Intro thesis subject + what is to come further on the thesis
+To provide an insight for developers as to which access control model to choose we study access control models and compare them as part of this thesis, this to provide an understanding of which models to use in which cases.
+This comparison is done by means of an case study on an existing industrial application.
+The models chosen are focused on role based access control and attribute based access control, but there are other families of models available too these will not be dealt with in this thesis.
+In the second chapter, the theoretical background, we go over the different models in detail.
+We also decide on which models we take into a next phase to prototype in our case study and justify why we have chosen these models.
+In the third chapter we explain the design and choices made for the implementation of the different models.
+In chapter four we explain the setup of the experiment we conduct, how we capture the different metrics for comparison and under which circumstances this is done.
+We present the results of our experiment in chapter five, we also offer a conclusion based on these results.
+In the sixth chapter we summarize the conclusions we have drawn from our study.
+We also refer to related work on the subject that has happened in this chapter, as well as future work that can still be done on comparing the different models for access control.

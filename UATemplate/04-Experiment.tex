@@ -1,0 +1,193 @@
+\chapter{Experiment}
+\label{chapt:Experiment}
+In the previous chapters we went over the different models that were available in literature, the models we have chosen to implement and compare, the requirements for these models and how they were implemented.
+In this chapter we explain our experiment, what exactly is our experiment, what do we want to accomplish with it, which are the variables that are at play in the experiment, what metrics/data do we gather and why do we gather those metrics/data.
+The results of the experiment are presented and reasoned about in the next chapter.
+
+\section{Experiment goals}
+The goal of the experiment is to find out on different levels which model performs better in the hands of users that will manage the system with both these models.
+These users can either be system administrators within the company or the developers of the system.
+We look at the manageability of the models for the administrators, which one is the easier one to manage, less error prone, fastest.
+We also look at the performance of the different models, abilities that the different models have concerning their features and how this affects the usability of both models.
+We hold an interview with the users so we can also get their experiences with the different models and what they thought about them. 
+
+
+\section{Experimental setup}
+To prepare our users for managing the system with the different models we first give them a small introduction on how to use the different models.
+This introduction includes showing the functionality of the different models, explaining specific behaviour such as how the hiding of attribute fields works and behaves and also how negative policies have priority over normal ones, the examples shown are representative to the tasks the users have to perform.
+Because of the minimal user interface we provided it is needed to give the users some extra information about the system, this is provided to them by means of a cheat sheet on which we give them the following extra information:
+\begin{itemize}
+    \item The attributes available on the different objects.
+    \item The included external sources of data and their corresponding placeholder.
+    \item Id to string mappings which are needed to know the status of some objects.
+    \item Short summary of what was told in the introduction.
+\end{itemize}
+\\
+The \textbf{users} are given multiple \textbf{scenario's} which each of them has to complete using the available \textbf{access control models}.
+These are the three variables that varied during the experiment, there are two different scenario's, two different users and two different models which makes for a total of eight experiments that are being conducted.
+
+\subsection{Users}
+There are a total of 2 users that take part in this experiment, these users have varied experience with the BESC system that already existed before implementing the access control models.
+One of the users is an advanced user that has significant knowledge of the inner workings of the BESC system as well as the systems underlying data model.
+This while the other user has not been involved with the development of the original system and has no extra knowledge about the BESC system aside from what we have provided on the cheat sheet.
+We have chosen for this difference in knowledge about the system to be able to compare the needed knowledge that is needed to manage the different models and whether or not having minimal knowledge about the system has a negative effect on the results. 
+
+\subsection{Scenario's}
+As our scenario's we have chosen two parts of the functionality that is offered in the BESC system.
+These scenario's have been chosen to showcase the two big requirements put forward by the system on fine grained access control, namely only accessing objects with certain attribute values and hiding certain attributes as a whole for the users.
+The first scenario is longer in number of tasks that have to be taken by the managing user and is a scenario where limited knowledge is needed, mainly meeting the first requirement stated.
+The second scenario is shorter in the number of tasks that have to be done by the users but the tasks are more complicated, require more knowledge of the system and showcases the second requirement for fine grained access.
+Both of these scenario's can be found in the appendix \ref{appendix:scenario} of this thesis.
+
+\subsection{Models}
+These are the attribute enhanced role based access control model and the attribute based access control model we have implemented into the BESC application.
+
+\section{Data capture}
+In this section we give an outline of the different metrics that are looked at to evaluate the models of access control that we implemented.
+An explanation is given of what we mean with each metric and how we measure/evaluate this metric.
+\subsection{Chosen metrics}
+Following are the metrics we wish to measure and research, we explain for each of these metrics what we mean with them.
+
+\begin{description}
+    \item [Manageability] Under manageability  we  look  at  how  easy  it  is to  manage the system for the admin, it is a broader term for multiple metrics.
+    This includes the correctness in managing the system using both models as well as the maintainability.
+    We also look at the speed of setting up the access control with both models and the number of rules needed to set it up.
+    We also look at the experiences the users had with each model.
+    \item [Correctness]  Correctness is seen as the amount of mistakes made by the users managing the system which lead to access to objects that violated the requirements.
+    \item [Maintainability] Maintainability deals with how easy it is to manage the existing system once the requirements on access control change or a new person is put in charge.
+    \item [Understandability] With understandability  we  look  at  how  easy or difficult it is to understand for users what they are allowed to access.
+    We also look at the admins and how easy it is for them to analyze the system with the different models and  and find out who has what access rights.
+    \item [Extensibility] With extensibility  we want to know if the models could easily be extended with new features and which features that would be.
+    \item [Performance] With performance we mean what effects the use of the different models has on the time to get access to an object. 
+    The computation time it takes to evaluate if a user has access or not.
+\end{description}
+
+\subsection{Capture methods}
+In this section we explain how we test for the different metrics explained in the previous section.
+We have 3 ways in which we obtain this data:
+
+\begin{enumerate}
+    \item The case study itself where we measure the performance of the users.
+    \item A concluding interview with the users where we wish to measure their experiences with the different models, the interview questions can be found in appendix \ref{appendix:interview}.
+    \item A performance test where we test which system does the access evaluation the quickest and in which circumstances.
+\end{enumerate}
+\\
+For each of the metrics we mention which of the above methods gave us the data for it.
+
+\subsubsection{Manageability}
+This part is done by doing an in depth interview with the participants of our experiment as well as data gathered from the experiment itself.
+There are multiple aspects to this part, the bigger ones are maintainability and correctness which are explained on their own below.
+The smaller aspects to this are:
+\begin{itemize}
+    \item The system setup time, how long it takes for the system to be set up in the different models given the requirements in the scenario's.
+    This is measured by timing the users in the experiment.
+    The order in which the experiment is done is first scenario one in the enhanced role based access control model, after that scenario one with the attribute based model, then the same order for the second scenario.
+    This so that we had sufficient time to do the manual tests for correctness (we had 1 environment for each model).
+    \item The number of rules that was used with each model, this was also measured from the experiment.
+    For this we simply look at how many permissions/policies were needed to put to get the working system.
+    We also take a look at the complexity of the rules.
+\end{itemize}
+
+\subsubsection{Correctness}
+With correctness we measure the number of mistakes made by the persons managing the system with the different models, this data is gathered from the case study itself.
+After the users set up the rules using the different models we manually try to get access to those parts of the system to see if we have access when we should have it.
+We also try to get access to parts we should not have access to, this to check if we can really not access them.
+We notice there are 3 types of errors that happen:
+\begin{enumerate}
+    \item Syntax errors are errors that happen because the users are mistaken in the syntax used in the conditions.
+    The usual mistakes here are putting a single = instead of == for comparisons or exchanging @ with \$ as a placeholder.
+    Since these mistakes have nothing to do with the models themselves but are all about syntax we exclude these errors from the study, these are corrected before we test the number of errors made.
+    \item Logical errors are the second type of errors that can happen.
+    These logical errors are made in the conditions and lead to the results being different than what was required.
+    Evaluating the conditions still succeeds but the result does not meet the the requirements.
+    The system still keeps evaluating the other rules.
+    The usual mistakes here are bad use of and/or operators or working with a wrong attribute on an object, but the used attribute does exist.
+    We measure this error for correctness.
+    \item Bad attribute errors, these errors happen when we try to access attributes that an object does not have in the conditions on that object.
+    These errors result in the system giving an error, not further evaluating the other rules that should still be checked, but instead just not allowing any access.
+    We measure this error for correctness.
+\end{enumerate}
+
+\subsubsection{Maintainability}
+The data for maintainability is mainly gathered from doing the interview that is provided in appendix \ref{appendix:interview}.
+We ask the users for their view on the aspects of how easy it would be to be make changes or be put in charge of the system, we want to find out from the users if they experience a difference between the two models.
+The interview contains multiple questions aimed at getting an answer on the maintainability of the system with the different models.
+\\
+\\
+We ask the views of the users for acting as existing admins when policies/permissions are added to the system with the following question:
+\\
+
+\textbf{\say{How clear were the interactions between existing policies/permissions and the newly added ones? Was it always clear what the effects of the additions were?} }
+\\
+\\
+We also try to get insights in how easy the admins think it would be for a new admin to work with the existing system by asking hem the following:
+\\
+
+\textbf{\say{Looking at the permissions and policies, how easy to understand would it be if you were put there as a new administrator for the system?} }
+\\
+\\
+Lastly we want to know how the users expect the maintainability of the system to be once it starts scaling up, what is the scalability of maintenance. For this we ask following question:
+\\
+
+\textbf{\say{Do you foresee any problems that can arise from using these models in systems that are bigger?} }
+\\
+\\
+While these are the main questions with maintainability in mind we can also go into this with the more general questions on which model they prefer over the other and for what reasons this is.
+\\
+\subsubsection{Understandability}
+Understanding what a user can do is critical, both for the admins of the system as for the users themselves.
+In our interview we ask our users which of the models is easier to understand, why this is the case, what would be needed to improve this and which model they find the best suited (from a developers standpoint) to make the access rights of users clear to them.
+Some of the questions for this goal overlap with manageability.
+\\
+\\
+We ask for the difficulty of understanding the access rights for new admins to the system, using the different models:
+\\
+
+\textbf{\say{Looking at the permissions and policies, how easy to understand would it be if you were put there as a new administrator for the system? Is one model better suited to do this than the other?} }
+\\
+\\
+\\
+We are also interested in their views as a developer on which model is best suited to make an interface more elaborate than the basic one we provided, in order to make it clear for the users what they are allowed to do:
+\\
+
+\textbf{\say{ Looking at it as a developer,  which model would be best to make the users easily understand their access rights?  Why do you think this is the case?} }
+\\
+\subsubsection{Extensibility}
+For extensibility we mainly look if both models provide the features needed to meet the requirements of the system we have established in chapter three.
+We also want to get an insight into what features the users would like to see in the models and whether or not some extensions seen in chapter two would be considered useful.
+We extract this information trough our interview.
+\\
+\\
+First of all we ask if the users were able to complete the scenario's in both models with the provided features:
+\\
+
+\textbf{\say{Were you able to complete all requested actions in the scenario,  given the available feature set?} }
+\\
+\\
+We also ask the users to name other features they would see as being useful as well as put forward an idea of our own (role hierarchy) with the following question:
+\\
+
+\textbf{\say{Are there any features that you think would benefit the different models?  What benefits do they provide?  Example of possible features:  role hierarchy.} }
+\\
+\subsubsection{Performance}
+With performance we measure response times between the different models. 
+The main goal here is to compare and see if there is a meaningful difference in the response times  between the attribute enhanced roles based model and the attribute based model.
+To do this we set up the system with the needed rules in place for 3 users with different roles, this this setup coincides with the first scenario given in appendix \ref{appendix:scenario}.
+We then do 100 requests for 100 objects, with a 100 seconds between the calls for each of these models.
+We measure the time it takes to receive the call and check it those 100 objects confirm with the rules that are put on the system, we also check if the call was successful or if an error happened.
+This data is gathered using the performance test.
+\\
+\\
+Since performance is predominantly tied with the evaluation of the different conditions we also asked the test admins to to their preferences concerning conditions in our interview.
+\\
+\\
+We ask them for their preferences on complex/simple conditions with following question:
+\\
+
+\textbf{\say{When using conditions did you prefer adding 1 permission/policy with complex conditions or multiple permissions/policies with simple conditions?} }
+\\
+\\
+We also want to know if they have other ideas for expanding what conditions could do:
+\\
+
+\textbf{\say{What do you think about the options that are available for constructing conditions?  Would they suffice for the systems you develop?  If not what additions could be made?} }
